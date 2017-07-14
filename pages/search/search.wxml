@@ -1,0 +1,18 @@
+<view id="{{item.id}}" class="kind-list-item-hd ">
+  <icon type="search" class="kind-list-img"></icon>
+  <input bindinput="input" value="{{value}}" class="kind-list-text" bindinput="inputfunc" placeholder="输入站点/首字母/编号" />
+</view>
+
+<!--查询所得模板-->
+
+<view class="kind-list-item-bd kind-list-item-bd-show">
+  <view class="navigator-box navigator-box-show">
+    <block wx:for-items="{{arr1}}"  wx:key="item.id">
+      <navigator bindtap="clear" url="../../pages/detail/detail?ch={{item.id}}" class="navigator">
+        <image src="../../Image/zhandian1.png" class="imgcla"></image>
+        <view class="navigator-text">{{item.ch}}</view>   
+        <view class="idcla">{{item.id}}</view>
+      </navigator>
+    </block>
+  </view>
+</view>

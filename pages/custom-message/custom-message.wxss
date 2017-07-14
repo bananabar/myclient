@@ -1,0 +1,7 @@
+/* pages/custom-message/custom-message.wxss */
+.sub-btn{
+  width: 100%;
+  background: #33d6ff;
+  line-height: 80rpx;
+  color: #fff;
+}

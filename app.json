@@ -1,0 +1,53 @@
+{
+  "pages": [ 
+    "pages/login/login",
+    "pages/index/index",
+    "pages/notice/notice",
+    "pages/search/search",
+    "pages/detail/detail",
+    "pages/noticedetail/noticedetail",
+    "pages/custom-message/custom-message",
+    "pages/shezhi/shezhi",
+    "pages/stationmessage/stationmessage",
+    "pages/stationmessage/Parameter/Parameter",
+    "pages/stationmessage/Record/Record",
+    "pages/baoxiu/baoxiu",
+    "pages/weixiujilu/weixiujilu",
+    "pages/equipment/equipment",
+    "pages/shezhi/aboutme/aboutme",
+    "pages/zhangdan/zhangdan",
+    "pages/shezhi/userinfo/userinfo",
+    "pages/weixiujilu/update/update",
+    "pages/weixiujilu/accept/accept",
+    "pages/weixiujilu/eluvation/eluvation",
+    "pages/weixiujilu/complete/complete",
+    "pages/weixiujilu/starteluvation/starteluvation",
+    "pages/fankui/fankui"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#63b8ff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#4D4D4D",
+    "selectedColor": "#1141FF",
+    "backgroundColor": "#ffffff",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "Image/index.png",
+        "selectedIconPath":"Image/index1.png"
+      },
+      {
+        "pagePath": "pages/shezhi/shezhi",
+        "text": "设置",
+        "iconPath": "Image/shezhi.png",
+        "selectedIconPath":"Image/shezhi1.png"
+      }
+    ]
+  }
+}

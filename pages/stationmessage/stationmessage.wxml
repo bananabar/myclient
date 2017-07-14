@@ -1,0 +1,27 @@
+
+<!--pages/stationmessage/stationmessage.wxml-->
+<view wx:if="{{ifshow}}" class="container1">
+  <image style="width:100%" mode="widthFix" src="{{jpgurl}}"></image>
+  <view class="category-item">
+    <block wx:for="{{smdetail}}" wx:key="1">
+      <view class="detail-item">
+        <text>{{item.key}}</text>
+        <text>{{item.val}}</text>
+      </view>
+    </block>
+  </view>
+  <view class="category-item1">
+    <view class="detail-item1" catchtap="parameter">
+      <text class="text-item">设备参数</text>
+      <view class="detail-item-btn"></view>
+    </view>
+    <view class="detail-item1" catchtap="record">
+      <text class="text-item">维修记录</text>
+      <view class="detail-item-btn"></view>
+    </view>
+    <view class="detail-item1" catchtap="baoxiu">
+      <text class="text-item">报修</text>
+      <view class="detail-item-btn"></view>
+    </view>
+  </view>
+</view>

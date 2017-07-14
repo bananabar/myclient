@@ -1,0 +1,23 @@
+<view class="weui-cells weui-cells_after-title" style="padding:10px 10px;background-color:#F8F8F8">
+  <view class="weui-cell weui-cell_input" style="background-color:#ffffff">
+    <view class="weui-cell__hd">
+      <view class="weui-label">选择月份</view>
+    </view>
+    <view class="weui-cell__bd">
+      <picker fields="month" mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+        <view class="weui-input">{{date}}</view>
+      </picker>
+    </view>
+  </view>
+  <view class="weui-cell weui-cell_input" style="background-color:#ffffff">
+    <view class="weui-cell__hd">
+      <view class="weui-label">用户类型</view>
+    </view>
+    <view class="weui-cell__bd">
+      <picker bindchange="bindPickerChange" value="{{leixingid}}" range="{{leixing}}">
+        <view class="weui-input">{{leixing[leixingid]}}</view>
+      </picker>
+    </view>
+  </view>
+</view>
+<button class="sub-btn" bindtap="confirm">查询账单</button>

@@ -1,0 +1,59 @@
+.mod-a {
+  padding: 30rpx 20rpx;
+  border-bottom: 1rpx solid #eee;
+}
+
+.key {
+  float: left;
+  height: 48rpx;
+  line-height: 48rpx;
+}
+
+.input {
+  height: 48rpx;
+  line-height: 48rpx;
+  padding-left: 10rpx;
+}
+
+.section {
+  padding: 30rpx 20rpx;
+  /*display: flex;*/
+  border-bottom: 1rpx solid #eee;
+}
+
+.section_title {
+  float: left;
+}
+
+.company-desc {
+  display: block;
+  float: none;
+  margin-bottom: 20rpx;
+}
+
+.create {
+  padding: 20rpx;
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+  left: 0;
+  height: 120rpx;
+  background: #f7f7f7;
+  z-index: 99;
+}
+
+.sub-btn {
+  width: 100%;
+  background: #33d6ff;
+
+  line-height: 80rpx;
+  color: #fff;
+}
+
+page {
+  padding-bottom: 120rpx;
+}
+
+.company-desc-txt {
+  width: 100%;
+}

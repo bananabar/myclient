@@ -1,0 +1,14 @@
+<image src="../../Image/dianchang.jpg" class="imgcla"></image>
+<view class="titletxtcla">
+  <text >{{noticedata.Title}}</text>
+</view>
+<view class="timetxtcla">
+  <text >{{noticedata.PublishTime}}</text>
+</view>
+<view class="detailtxtcla">
+  <!--<view >{{noticedata.Detail}}</view>-->
+  <!--<text style="text-indent:2em;">{{noticedata.Detail}}</text>-->
+  <view class="detailvaluecla" wx:for="{{arr}}" wx:for-index="i" wx:key="{{i}}">{{arr[i]}}</view>
+</view>
+<image style="width:47%;height:100px;left:50%;position:relative;" src="../../Image/zhang1.png">西安家家乐热力有限公司</image>
+

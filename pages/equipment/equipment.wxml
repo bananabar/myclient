@@ -1,0 +1,11 @@
+<view wx:if="{{ifshow}}" class="index-bd">
+  <view class="kind-list">
+    <block wx:for="{{Equipmentdata}}" wx:for-index="i" wx:key="i">
+        <view data-id="{{Equipmentdata[i].KSID}}" class="news-item" hover-class="viewhover1" bindtap="navigator">
+          <image src="{{Equipmentdata[i].JpgUrl}}" class="imgcla1"></image>
+          <view class="kind-list-text"><text style="margin-left: 20rpx">{{Equipmentdata[i].Name}}</text></view>
+          <view class="kind-list-img" style="color:#777777;text-align:right;">{{Equipmentdata[i].KSID}}</view>
+        </view>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,37 @@
+@import "../../utils/weui.wxss";
+
+.news-item {
+  padding-left: 16rpx;
+  padding-top: 16rpx;
+  padding-right: 16rpx;
+  padding-bottom: 16rpx;
+  margin-left: 16rpx;
+  margin-right: 16rpx;
+  margin-top: 16rpx;
+  background-color: #fff;
+  border: 2rpx solid #eaeaea;
+  border-bottom: 2rpx solid #d0d0d0;
+  border-radius: 10rpx;
+}
+
+.news-item-hover {
+  background-color: #eee;
+}
+
+.viewhover1 {
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0.7;
+}
+
+.imgcla {
+  float: left;
+  width: 136rpx;
+  height: 94rpx;
+}
+
+.sub-btn {
+  width: 100%;
+  background: #33d6ff;
+  line-height: 80rpx;
+  color: #fff;
+}

@@ -1,0 +1,63 @@
+<!--pages/stationmessage/Record/Record.wxml-->
+<view class="container1">
+  <view class="category-item" wx:for="{{record}}" wx:key="1">
+    <block>
+      <view class="detail-item ">
+        <text>报修人员</text>
+        <text>{{item.Client}}</text>
+      </view>
+    </block>
+    <block>
+      <view class="detail-item ">
+        <text>报修人员电话</text>
+        <text>{{item.CientTel}}</text>
+      </view>
+    </block>
+    <block>
+      <view class="detail-item ">
+        <text>维修人员</text>
+        <text>{{item.servername}}</text>
+      </view>
+    </block>
+    <block>
+      <view class="detail-item ">
+        <text>维修人员电话</text>
+        <text>{{item.servertle}}</text>
+      </view>
+    </block>
+    <block>
+      <view class="detail-item ">
+        <text>公司费用</text>
+        <text>{{item.CompanyCost}}元</text>
+      </view>
+    </block>
+    <block>
+      <view class="detail-item ">
+        <text>用户费用</text>
+        <text>{{item.ClientCost}}元</text>
+      </view>
+    </block>
+    <block>
+      <view class="detail-item ">
+        <text>维修时间</text>
+        <text>{{item.time3}}</text>
+      </view>
+    </block>
+    <block>
+      <view class="note-item ">
+        <text>故障描述</text>
+        <view class="text-item">
+          <text>{{item.Question}}</text>
+        </view>
+      </view>
+    </block>
+    <block>
+      <view class="note-item ">
+        <text>解决方法</text>
+        <view class="text-item">
+          <text>{{item.Note}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

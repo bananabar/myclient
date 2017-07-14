@@ -1,0 +1,15 @@
+<!--pages/shezhi/aboutme/aboutme.wxml-->
+<view class="contain">
+<view class="main">
+  <text>西安欧普科技有限公司</text>
+</view>
+<view class="main">
+  <text>邮箱：1176081440@qq.com</text>
+</view>
+<view class="main">
+  <text>联系电话：029-85511589</text>
+</view>
+<view class="main">
+  <text>公司地址：文艺路天伦盛世2号楼1907</text>
+</view>
+</view>

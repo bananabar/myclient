@@ -1,0 +1,161 @@
+@import "../../utils/index.wxss";
+
+page {
+  background-color: #fff;
+}
+
+.titleimgcla {
+  width: 80rpx;
+  height: 80rpx;
+  padding: 7rpx;
+}
+
+.titletextcla {
+  font-size: 45rpx;
+  width: 600rpx;
+  padding: 0rpx 0rpx 0 20rpx;
+}
+
+.detailcla {
+  padding: 30rpx;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.3s;
+  border-style: none none solid none;
+  border-bottom-color: #b3b3b3;
+  border-bottom-width: 1rpx;
+}
+
+.lieimgcla {
+  width: 50rpx;
+  height: 50rpx;
+  padding: 7rpx;
+}
+
+.canvas {
+  width: 100%;
+  height: 300rpx;
+}
+
+.lietitlecla {
+  font-size: 30rpx;
+  width: 25%;
+}
+
+.liegongcla {
+  font-size: 30rpx;
+  color: #6f6f6f;
+}
+
+.lievaluecla1 {
+  font-size: 30rpx;
+  width: 18%;
+  color: #07c6c6;
+}
+
+.lievaluecla2 {
+  font-size: 30rpx;
+  width: 18%;
+  color: #07c6c6;
+}
+
+.lieimgcla1 {
+  width: 50rpx;
+  height: 50rpx;
+  padding: 9rpx;
+}
+
+.lietitlecla1 {
+  font-size: 30rpx;
+  width: 35%;
+}
+
+.lievaluecla3 {
+  font-size: 30rpx;
+  color: #07c6c6;
+  width: 35%;
+}
+
+.kind-list-item-hd-show1 {
+  opacity: 0.5;
+}
+
+.button1 {
+  color: #fff;
+  background-color: #08d6d6;
+  line-height: 2;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+}
+
+.banvaluecla {
+  font-size: 30rpx;
+  color: #07c6c6;
+}
+
+.button2 {
+  color: #08d6d6;
+  background-color: #fff;
+}
+
+.bantxtcla {
+  font-size: 30rpx;
+}
+
+.navigator2 {
+  padding: 10rpx 30rpx;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.navigator1 {
+  padding: 20rpx 30rpx;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.navigator1:before {
+  content: " ";
+  position: absolute;
+  left: 30rpx;
+  top: 0;
+  right: 30rpx;
+  height: 1rpx;
+  border-top: 1rpx solid #d8d8d8;
+  color: #d8d8d8;
+}
+
+.navigator1:after {
+  content: " ";
+  position: absolute;
+  left: 30rpx;
+  bottom: 0;
+  right: 30rpx;
+  height: 1px;
+  border-top: 1rpx solid #d8d8d8;
+  color: #d8d8d8;
+}
+
+.navigator-arrow::after {
+  content: " ";
+  display: inline-block;
+  height: 18rpx;
+  width: 18rpx;
+  border-width: 2rpx 2rpx 0 0;
+  border-color: #888;
+  border-style: solid;
+  transform: matrix(0.71, -0.71, 0.71, 0.71, 0, 0);
+  position: absolute;
+  top: 50%;
+  margin-top: -8rpx;
+  right: 28rpx;
+  transition: 0.5s;
+}
+
+.navigator-arrow1::after {
+  transform: matrix(0.71, 0.71, 0.71, -0.71, 0, 0);
+}

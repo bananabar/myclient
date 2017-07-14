@@ -1,0 +1,16 @@
+/* pages/weixiujilu/starteluvation/starteluvation.wxss */
+@import "../../baoxiu/baoxiu.wxss";
+.check-group{
+  overflow: hidden;
+}
+.checkbox{
+  float: left;
+  width: 33%;
+}
+.i-check{
+  margin-top: 20rpx;
+}
+.checkbox-type{
+  width: 33%;
+  float: left;
+}

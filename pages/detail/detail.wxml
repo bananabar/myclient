@@ -1,0 +1,102 @@
+<view class="kind-list-item-bd kind-list-item-bd-show">
+  <view class="navigator-box navigator-box-show">
+    <view class="navigator">
+      <image class="titleimgcla" src="../../Image/zhandian2.png"></image>
+      <view class="titletextcla">{{ch}}</view>
+    </view>
+  </view>
+</view>
+<view wx:if="{{sort<500}}" class="kind-list-item-bd kind-list-item-bd-show">
+  <view class="navigator-box navigator-box-show">
+    <block wx:for-items="{{arr1}}" wx:key="item.id">
+      <view class="navigator {{item.open ? 'kind-list-item-hd-show1' : ''}}" bindtap="kindToggle" id="{{item.id}}">
+        <image src="{{item.tu}}" class="lieimgcla"></image>
+        <view class="lietitlecla">{{item.title}}</view>
+        <view class="liegongcla">供水:</view>
+        <view class="lievaluecla1">{{item.gong}}</view>
+        <view class="liegongcla">回水:</view>
+        <view class="lievaluecla2">{{item.hui}}</view>
+        <view class="navigator-arrow {{item.open ? 'navigator-arrow1' : ''}}"></view>
+      </view>
+      <view style="background-color:#eeeeee" class="kind-list-item-bd {{item.open ? 'kind-list-item-bd-show' : ''}}">
+        <!--<view class="navigator-box {{item.open ? 'navigator-box-show':''}}">-->
+          <canvas wx:if="{{item.open}}" canvas-id="lineCanvas{{item.id}}" class="canvas" bindtouchstart="touchHandler"></canvas>
+        <!--</view>-->
+      </view>
+    </block>
+  </view>
+</view>
+<view wx:else class="kind-list-item-bd kind-list-item-bd-show">
+  <view class="navigator-box navigator-box-show">
+    <block wx:for-items="{{arr1}}" wx:key="item.id">
+      <view class="navigator {{item.open ? 'kind-list-item-hd-show1' : ''}}" bindtap="kindToggle" id="{{item.id}}">
+        <image src="{{item.tu}}" class="lieimgcla1"></image>
+        <view class="lietitlecla1">{{item.title}}</view>
+        <view class="liegongcla">供汽:</view>
+        <view class="lievaluecla3">{{item.gong}}</view>
+        <view class="navigator-arrow {{item.open ? 'navigator-arrow1' : ''}}"></view>
+      </view>
+      <view style="background-color:#eeeeee" class="kind-list-item-bd {{item.open ? 'kind-list-item-bd-show' : ''}}">
+        <canvas wx:if="{{item.open}}" canvas-id="lineCanvas{{item.id}}" class="canvas" bindtouchstart="touchHandler"></canvas>
+      </view>
+    </block>
+  </view>
+</view>
+<view wx:if="{{bhnum>0}}" class="kind-list-item-bd kind-list-item-bd-show">
+  <view class="navigator-box navigator-box-show">
+    <view class="navigator1">
+      <button wx:if="{{bhnum>0}}" bindtap="kindToggle1" id="{{banhuan[0].id}}" class="button1 {{banhuan[0].open ? 'button2' : ''}}">板换A</button>
+      <button wx:if="{{bhnum>1}}" bindtap="kindToggle1" id="{{banhuan[1].id}}" class="button1 {{banhuan[1].open ? 'button2' : ''}}">板换B</button>
+      <button wx:if="{{bhnum>2}}" bindtap="kindToggle1" id="{{banhuan[2].id}}" class="button1 {{banhuan[2].open ? 'button2' : ''}}">板换C</button>
+    </view>
+  </view>
+  <view style="background-color:#eeeeee" class="kind-list-item-bd {{banhuan[0].open||banhuan[1].open||banhuan[2].open ? 'kind-list-item-bd-show' : ''}}">
+    <view class="navigator-box {{banhuan[0].open||banhuan[1].open||banhuan[2].open ? 'navigator-box-show' : ''}}">
+      <block>
+        <view class="navigator2">
+          <view class="bantxtcla" style="padding-left:5%">供水温度：</view>
+          <view class="banvaluecla" style="width:35%">{{gong1}}</view>
+          <view class="bantxtcla">回水温度：</view>
+          <view class="banvaluecla">{{hui1}}</view>
+        </view>
+      </block>
+      <block>
+        <view class="navigator2">
+          <view class="bantxtcla" style="padding-left:4%">调节阀给定：</view>
+          <view class="banvaluecla" style="width:28%">{{gei1}}</view>
+          <view class="bantxtcla">调节阀反馈：</view>
+          <view class="banvaluecla">{{fan1}}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>
+<view wx:if="{{bhnum>3}}" class="kind-list-item-bd kind-list-item-bd-show">
+  <view class="navigator-box navigator-box-show">
+    <view class="navigator">
+      <button wx:if="{{bhnum>3}}" bindtap="kindToggle1" id="{{banhuan[3].id}}" class="button1 {{banhuan[3].open ? 'button2' : ''}}">板换D</button>
+      <button wx:if="{{bhnum>4}}" bindtap="kindToggle1" id="{{banhuan[4].id}}" class="button1 {{banhuan[4].open ? 'button2' : ''}}">板换E</button>
+      <button wx:if="{{bhnum>5}}" bindtap="kindToggle1" id="{{banhuan[5].id}}" class="button1 {{banhuan[5].open ? 'button2' : ''}}">板换F</button>
+    </view>
+  </view>
+  <view style="background-color:#eeeeee" class="kind-list-item-bd {{banhuan[3].open||banhuan[4].open||banhuan[5].open ? 'kind-list-item-bd-show' : ''}}">
+    <view class="navigator-box {{banhuan[3].open||banhuan[4].open||banhuan[5].open ? 'navigator-box-show' : ''}}">
+      <block>
+        <view class="navigator2">
+          <view class="bantxtcla" style="padding-left:5%">供水温度：</view>
+          <view class="banvaluecla" style="width:35%">{{gong2}}</view>
+          <view class="bantxtcla">回水温度：</view>
+          <view class="banvaluecla">{{hui2}}</view>
+        </view>
+      </block>
+      <block>
+        <view class="navigator2">
+          <view class="bantxtcla" style="padding-left:4%">调节阀给定：</view>
+          <view class="banvaluecla" style="width:28%">{{gei2}}</view>
+          <view class="bantxtcla">调节阀反馈：</view>
+          <view class="banvaluecla">{{fan2}}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

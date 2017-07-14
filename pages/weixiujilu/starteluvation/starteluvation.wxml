@@ -1,0 +1,23 @@
+<form bindsubmit="formSubmit">
+  <view class="mod-a">
+    <view class="mod">
+      <text>评价等级:</text>
+      <checkbox-group bindchange="checkboxChange" name="ServiceType" class="check-group">
+        <label class="checkbox-type" wx:for="{{items}}" wx:for-item="info" wx:key="{{info.id}}">
+          <checkbox  value="{{info.id}}" checked="{{info.checked}}" class="i-check" />{{info.value}}
+        </label>
+      </checkbox-group>
+    </view>
+  </view>
+  
+  <view class="mod-a">
+    <view class="mod">
+      <text class="key company-desc">评价内容:</text>
+      <textarea name="neirong" bindblur="bindTextAreaBlur" auto-height placeholder="评价内容" class="company-desc-txt" />
+    </view>
+  </view>
+ 
+  <view class="create" wx:if="{{role!=2}}">
+    <button formType="submit" class="sub-btn">提交</button>
+  </view>
+</form>

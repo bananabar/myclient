@@ -1,0 +1,34 @@
+<view class="container1"> 
+  <view class="category-item personal-info" bindtap="userInfo">
+
+    <image class="user-avatar" src="{{avatarUrl}}"></image>
+
+    <view class="user-name" >
+      <view class="user-nickname">
+        <text>用户：{{userInfo.UserName}}</text>
+      </view>
+      <view class="user-locaiton">
+        <text>用户ID：{{userInfo.Code}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="category-item">
+    <block wx:for="{{device}}" wx:key="i">
+      <view class="detail-item" catchtap="{{item.tap}}">
+        <image src="{{item.iconurl}}"></image>
+        <text>{{item.title}}</text>
+        <view class="detail-item-btn"></view>
+      </view>
+    </block>
+  </view>
+  <view class="category-item">
+    <block wx:for="{{cache}}" wx:key="i">
+      <view class="detail-item" catchtap="{{item.tap}}">
+        <image src="{{item.iconurl}}"></image>
+        <text>{{item.title}}</text>
+        <view class="detail-item-btn"></view>
+      </view>
+    </block>
+  </view>
+ 
+</view>

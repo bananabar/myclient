@@ -1,0 +1,35 @@
+<form bindsubmit="formSubmit">
+  <view class="mod-a">
+    <view class="mod t-name">
+      <text class="key">联系人姓名:</text>
+      <input name="ConnectPerson" class="input" maxlength="100" placeholder="请输入..." />
+    </view>
+  </view>
+  <view class="mod-a">
+    <view class="mod t-name">
+      <text class="key">联系人电话:</text>
+      <input name="ConnectPhone" class="input" maxlength="100" placeholder="请输入..." />
+    </view>
+  </view>
+  <view class="mod-a">
+    <view class="mod">
+      <text class="key company-desc">设备问题描述:</text>
+      <textarea name="Question"  auto-height placeholder="简介" class="company-desc-txt" />
+    </view>
+  </view>
+  <view class="mod-a">
+    <view class="mod">
+      <text class="key company-desc">上门维修时间:</text>
+      <textarea name="SuitTime"  auto-height placeholder="时间" class="company-desc-txt" />
+    </view>
+  </view>
+  <view class="mod-a">
+    <view class="mod">
+      <text class="key company-desc">备注:</text>
+      <textarea name="Note"  auto-height placeholder="备注" class="company-desc-txt" />
+    </view>
+  </view>
+  <view class="create" wx:if="{{role!=2}}">
+    <button formType="submit" class="sub-btn">提交</button>
+  </view>
+</form>

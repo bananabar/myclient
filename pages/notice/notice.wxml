@@ -1,0 +1,27 @@
+<view class="weui-cells weui-cells_after-title" style="padding:10px 10px;background-color:#F8F8F8">
+  <view class="weui-cell weui-cell_input" style="background-color:#ffffff">
+    <view class="weui-cell__hd" >
+      <view class="weui-label">选择月份</view>
+    </view>
+    <view class="weui-cell__bd">
+      <picker fields="month" mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+        <view class="weui-input">{{date}}</view>
+      </picker>
+    </view>
+  </view>
+</view>
+<view class="index-bd">
+  <view class="kind-list">
+    <block wx:for="{{noticedata}}" wx:for-index="i" wx:key="{{i}}">
+      <navigator url="../noticedetail/noticedetail?id={{i}}">
+        <view class="news-item" hover-class="viewhover1">
+          <image src="../../Image/laba2.png" class="imgcla"></image>
+          <view class="kind-list-text">
+            <text>{{noticedata[i].Title}}</text>
+          </view>
+          <view class="kind-list-img" style="color:#777777;text-align: right">{{noticedata[i].PublishTime}}</view>
+        </view>
+      </navigator>
+    </block>
+  </view>
+</view>

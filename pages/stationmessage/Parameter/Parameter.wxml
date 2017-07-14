@@ -1,0 +1,10 @@
+<view class="container1">
+  <view class="category-item">
+    <block wx:for="{{parameter}}" wx:key="1">
+      <view class="detail-item">
+        <text>{{item.key}}</text>
+        <text>{{item.val}}</text>
+      </view>
+    </block>
+  </view>
+</view>

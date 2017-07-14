@@ -1,0 +1,155 @@
+<view class="top-tab flexItem flex-tab">
+  <view class="toptab flex-item {{currentNavtab==idx ? 'active' : ''}}" wx:for="{{navTab}}" wx:for-index="idx" wx:for-item="itemName" wx:key="{{idx}}" data-idx="{{idx}}" bindtap="switchTab">
+    {{itemName}}
+  </view>
+</view>
+
+<view class="tab_con flexItem rowStyle">
+  <view style="width:100%;" wx:if="{{currentNavtab==0}}">
+    <view class="tableView" wx:for="{{ updatemaintence }}" wx:for-item="info" wx:key="{{info.MaintenanceId}}" data-id="{{info.MaintenanceId}}" bindtap="update">
+      <view class="flexItem rowStyle tableViewCellHeader marginTop10" >
+        <image class="orderImage marginLeft12" src="../../Image/zhangdan.png"></image>
+        <label class="color54 fontSize12">维修单编号: {{info.MaintenanceId}}</label>
+      </view>
+      <view class="flexItem rowStyle  personInfo" >
+        <view class="flexItem rowStyle marginLeft12 centers">
+          <image class="userHeader" src="{{ url }}"></image>
+          <label class="color54 fontSize12">{{ nickName }}</label>
+        </view>
+        <view class="flexItem rowStyle marginRight12 centers" catchtap="callEvent">
+          <image class="call" src="../../Image/dianhua.png"></image>
+          <label class="color54 fontSize12">{{ info.CientTel }}</label>
+        </view>
+      </view>
+      <view class="flexItem columnStyle tableViewCell" >
+        <view class="flexItem rowStyle marginBottom10 cellStyle">
+          <label class="color54 fontSize12">预约时间</label>
+          <label class="fontSize14">{{ info.SuitTime }}</label>
+        </view>
+        <view class="flexItem rowStyle marginBottom10 cellStyle">
+          <label class="color54 fontSize12">报修人</label>
+          <label class="color54 fontSize12">{{info.Client}}</label>
+        </view>
+        <view class="flexItem rowStyle marginBottom10 cellStyle">
+          <label class="color54 fontSize12">设备名称</label>
+          <label class="color54 fontSize12">{{ info.shebei }}</label>
+        </view>
+      </view>
+      <view class="flexItem rowStyle centers orderStatus" >
+        <image class="statusImage" src="{{ statusImage[0] }}"></image>
+        <label class="statusText fontSize14">{{ statusText[0] }}</label>
+      </view>
+    </view>
+  </view>
+
+  <view style="width:100%;" wx:if="{{currentNavtab==1}}">
+    <view class="tableView" wx:for="{{ acceptmaintence }}" wx:for-item="info" wx:key="{{info.MaintenanceId}}" data-id="{{info.MaintenanceId}}" bindtap="accept">
+      <view class="flexItem rowStyle tableViewCellHeader marginTop10" >
+        <image class="orderImage marginLeft12" src="../../Image/zhangdan.png"></image>
+        <label class="color54 fontSize12">维修单编号: {{info.MaintenanceId}}</label>
+      </view>
+      <view class="flexItem rowStyle  personInfo" >
+        <view class="flexItem rowStyle marginLeft12 centers">
+          <image class="userHeader" src="{{ url }}"></image>
+          <label class="color54 fontSize12">{{ nickName }}</label>
+        </view>
+        <view class="flexItem rowStyle marginRight12 centers" catchtap="callEvent">
+          <image class="call" src="../../Image/dianhua.png"></image>
+          <label class="color54 fontSize12">{{ info.CientTel }}</label>
+        </view>
+      </view>
+      <view class="flexItem columnStyle tableViewCell" >
+        <view class="flexItem rowStyle marginBottom10 cellStyle">
+          <label class="color54 fontSize12">设备名称</label>
+          <label class="fontSize14">{{ info.shebei }}</label>
+        </view>
+        <view class="flexItem rowStyle marginBottom10 cellStyle">
+          <label class="color54 fontSize12">维修人电话</label>
+          <label class="color54 fontSize12">{{ info.Mobile }} </label>
+        </view>
+        <view class="flexItem rowStyle marginBottom10 cellStyle">
+          <label class="color54 fontSize12">维修人姓名</label>
+          <label class="color54 fontSize12">{{ info.RealName }}</label>
+        </view>
+      </view>
+      <view class="flexItem rowStyle centers orderStatus" >
+        <image class="statusImage" src="{{ statusImage[0] }}"></image>
+        <label class="statusText fontSize14">{{ statusText[1] }}</label>
+      </view>
+    </view>
+  </view>
+
+  <view style="width:100%;" wx:if="{{currentNavtab==2}}">
+    <view class="tableView" wx:for="{{ waiteluvation }}" wx:for-item="info" wx:key="{{info.MaintenanceId}}" data-id="{{info.MaintenanceId}}" bindtap="eluvation">
+      <view class="flexItem rowStyle tableViewCellHeader marginTop10" >
+        <image class="orderImage marginLeft12" src="../../Image/zhangdan.png"></image>
+        <label class="color54 fontSize12">维修单编号: {{info.MaintenanceId}}</label>
+      </view>
+      <view class="flexItem rowStyle  personInfo" >
+        <view class="flexItem rowStyle marginLeft12 centers">
+          <image class="userHeader" src="{{ url }}"></image>
+          <label class="color54 fontSize12">{{ nickName }}</label>
+        </view>
+        <view class="flexItem rowStyle marginRight12 centers" catchtap="callEvent">
+          <image class="call" src="../../Image/dianhua.png"></image>
+          <label class="color54 fontSize12">{{ info.CientTel }}</label>
+        </view>
+      </view>
+      <view class="flexItem columnStyle tableViewCell" >
+        <view class="flexItem rowStyle marginBottom10 cellStyle">
+          <label class="color54 fontSize12">设备名称</label>
+          <label class="fontSize14">{{ info.shebei }}</label>
+        </view>
+        <view class="flexItem rowStyle marginBottom10 cellStyle">
+          <label class="color54 fontSize12">设备评价</label>
+          <label class="color54 fontSize12">{{ info.Evaluation }} </label>
+        </view>
+        <view class="flexItem rowStyle marginBottom10 cellStyle">
+          <label class="color54 fontSize12">设备问题</label>
+          <label class="color54 fontSize12">{{ info.Question }}</label>
+        </view>
+      </view>
+      <view class="flexItem rowStyle centers orderStatus" >
+        <image class="statusImage" src="{{ statusImage[0] }}"></image>
+        <label class="statusText fontSize14">{{ statusText[2] }}</label>
+      </view>
+    </view>
+  </view>
+
+  <view style="width:100%;" wx:if="{{currentNavtab==3}}">
+    <view class="tableView" wx:for="{{ eluvation }}" wx:for-item="info" wx:key="{{info.MaintenanceId}}" data-id="{{info.MaintenanceId}}" bindtap="complete">
+      <view class="flexItem rowStyle tableViewCellHeader marginTop10" >
+        <image class="orderImage marginLeft12" src="../../Image/zhangdan.png"></image>
+        <label class="color54 fontSize12">维修单编号: {{info.MaintenanceId}}</label>
+      </view>
+      <view class="flexItem rowStyle  personInfo" >
+        <view class="flexItem rowStyle marginLeft12 centers">
+          <image class="userHeader" src="{{ url }}"></image>
+          <label class="color54 fontSize12">{{ nickName }}</label>
+        </view>
+        <view class="flexItem rowStyle marginRight12 centers" catchtap="callEvent">
+          <image class="call" src="../../Image/dianhua.png"></image>
+          <label class="color54 fontSize12">{{ info.CientTel }}</label>
+        </view>
+      </view>
+      <view class="flexItem columnStyle tableViewCell" >
+        <view class="flexItem rowStyle marginBottom10 cellStyle">
+          <label class="color54 fontSize12">设备名称</label>
+          <label class="fontSize14">{{ info.shebei }}</label>
+        </view>
+        <view class="flexItem rowStyle marginBottom10 cellStyle">
+          <label class="color54 fontSize12">评价等级</label>
+          <label class="color54 fontSize12">{{ info.Lever }} </label>
+        </view>
+        <view class="flexItem rowStyle marginBottom10 cellStyle">
+          <label class="color54 fontSize12">评价内容</label>
+          <label class="color54 fontSize12">{{ info.Description }}</label>
+        </view>
+      </view>
+      <view class="flexItem rowStyle centers orderStatus" >
+        <image class="statusImage" src="{{ statusImage[1] }}"></image>
+        <label class="statusText fontSize14">{{ statusText[3] }}</label>
+      </view>
+    </view>
+  </view>
+</view>

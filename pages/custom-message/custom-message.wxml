@@ -1,0 +1,10 @@
+<view class="container">
+  <view class="page-body">
+    <view class="page-body-wrapper">
+      <text class="page-body-title">
+        为保证服务质量，您与客服的聊天将被记录
+      </text>
+        <button open-type="contact" class="sub-btn">联系客服</button>
+    </view>
+  </view>
+</view>

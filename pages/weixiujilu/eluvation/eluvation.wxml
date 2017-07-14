@@ -1,0 +1,39 @@
+<view class="container1">
+  <view class="category-item">
+    <block wx:for="{{data1}}" wx:key="1">
+      <view class="detail-item">
+        <text>{{item.key}}</text>
+        <text>{{item.val}}</text>
+      </view>
+    </block>
+  </view>
+</view>
+<view class="container1">
+  <view class="category-item">
+    <block wx:for="{{data2}}" wx:key="1">
+      <view class="detail-item new">
+        <view class="block-item">
+          <text>{{item.key}}</text>
+          <view class="txt-item">
+            <text>{{item.val}}</text>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+<view class="container1">
+  <view class="category-item">
+    <block wx:for="{{data3}}" wx:key="1">
+      <view class="detail-item">
+        <text>维修人员</text>
+        <text>{{item.name}}</text>
+      </view>
+      <view class="detail-item">
+        <text>维修人员电话</text>
+        <text>{{item.telephone}}</text>
+      </view>
+    </block>
+  </view>
+</view>
+<button class="sub-btn" bindtap="confirm">评价订单</button>

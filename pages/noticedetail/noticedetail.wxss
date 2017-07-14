@@ -1,0 +1,35 @@
+page{
+  background-color:#ffffff;
+}
+.titletxtcla {
+  text-align: center;
+  font-size: 50rpx;
+  padding-top: 20rpx;
+}
+
+.timetxtcla {
+  padding-right: 20rpx;
+  text-align: right;
+  font-size: 35rpx;
+  color: darkgray;
+}
+
+.detailtxtcla {
+  padding-top: 60rpx;
+  text-indent: 2em;
+  padding-left: 10px;
+}
+
+.detailvaluecla {
+  padding-bottom: 20rpx;
+}
+
+.imgcla{
+  width:100%;
+  height: 375rpx;
+}
+
+.txtcla{
+  position: absolute;
+  left:50%;
+}
